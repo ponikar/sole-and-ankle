@@ -1,9 +1,9 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import { COLORS, WEIGHTS } from '../../constants';
-import Logo from '../Logo';
-import SuperHeader from '../SuperHeader';
+import { COLORS, WEIGHTS } from "../../constants";
+import Logo from "../Logo";
+import SuperHeader from "../SuperHeader";
 
 const Header = () => {
   // Our site features two visual headers, but they should be
@@ -27,11 +27,15 @@ const Header = () => {
 };
 
 const MainHeader = styled.div`
-  padding: 0 32px;
+  padding: 21px 32px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+  display: flex;
+  align-items: center;
 `;
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+  margin: auto;
+`;
 
 const NavLink = styled.a`
   font-size: 1.125rem;
@@ -39,6 +43,8 @@ const NavLink = styled.a`
   text-decoration: none;
   color: ${COLORS.gray[900]};
   font-weight: ${WEIGHTS.medium};
+  margin-right: 48px;
+  padding: 20px 0px;
 
   &:first-of-type {
     color: ${COLORS.secondary};
